@@ -1,4 +1,3 @@
-Okay, this is a fantastic foundation! Having `docker-compose.yml` and focusing solely on Python for code examples simplifies the setup for users significantly.
 
 ## ⚙️ Prerequisites
 
@@ -17,7 +16,7 @@ Follow these steps to set up your environment and start exploring the training m
 1. **Clone the Repository:**
    
    ```bash
-   git clone https://github.com/jsbhullar/your-repo-name.git
+   git clone https://github.com/jsbhullar/valkey-enterprise-training.git
    cd your-repo-name
    ```
    
