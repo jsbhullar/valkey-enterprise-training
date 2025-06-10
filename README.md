@@ -17,7 +17,7 @@ Follow these steps to set up your environment and start exploring the training m
    
    ```bash
    git clone https://github.com/jsbhullar/valkey-enterprise-training.git
-   cd your-repo-name
+   cd valkey-enterprise-training
    ```
    
    
