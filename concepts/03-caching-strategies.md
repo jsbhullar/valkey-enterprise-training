@@ -5,7 +5,7 @@
 
 **Content:**
 
-1.  **Valkey as a Cache: Fundamentals & Benefits (8 min)**
+1.  **Valkey as a Cache: Fundamentals & Benefits**
     *   **The Bottleneck:** Explain that primary data stores (databases, external APIs) are often the slowest part of an application due to disk I/O, network latency, and query complexity.
     *   **The Solution: Valkey as an In-Memory Cache:** Store frequently accessed or computationally expensive data in Valkey, a **lightning-fast, in-memory data store**. Valkey sits between your application and a slower backend data source.
     *   **Key Benefits (Recap):**
@@ -18,7 +18,8 @@
         *   **Key-Value Model & Versatile Data Types:** Simple for caching. Strings are common for full objects (serialized JSON), Hashes for structured objects (user profiles), Lists for recent items, etc.
         *   **Expiration (Time To Live - TTL):** Essential for freshness. Valkey allows setting a TTL on keys (`EXPIRE key seconds`, `SETEX key seconds value`). This is crucial for keeping data fresh and preventing stale information, as keys are automatically deleted after the timeout. *Note:* Overwriting a key with `SET` will clear its existing TTL.
 
-2.  **Application-Level Caching Strategies with Valkey (10 min)**
+
+2.  **Application-Level Caching Strategies with Valkey**
     *   **Introduction:** These strategies define *how your application code* interacts with the cache (Valkey) and the primary data source (e.g., database) during reads and writes.
     *   **1. Cache-Aside Pattern (Most Common & Recommended):**
         *   **Concept:** The application explicitly manages caching logic. It first tries to read from the cache. If a miss, it reads from the database, and then writes *to the cache* for future use.
@@ -43,7 +44,8 @@
         *   **When to use:** When high write throughput is critical, and some data loss tolerance or eventual consistency is acceptable if the system crashes before the async write completes.
     *   **Summary:** **Cache-Aside is the dominant and most practical pattern for Valkey**, offering excellent performance and simpler implementation.
 
-3.  **Practical Lab: Cache-Aside in Python (12 min)**
+
+3.  **Practical Lab: Cache-Aside in Python**
     *   **Key Valkey Commands:** `SETEX key seconds value`, `EXPIRE key seconds`, `TTL key`, `PERSIST key`, `DEL key`.
     *   **Live Coding Example:** Simulating a slow database fetch for product details and demonstrating the Cache-Aside pattern.
 
@@ -125,7 +127,8 @@
     v_caching_conn.close() # Close connection
     ```
 
-4.  **Valkey's Role in Cache Management & Advanced Optimizations (10 min)**
+
+4.  **Valkey's Role in Cache Management & Advanced Optimizations**
     *   **Server-Side Memory Management & Eviction Policies:**
         *   To prevent Valkey from consuming all available RAM, you configure a **`maxmemory` limit** (e.g., `maxmemory 2gb`) in `valkey.conf`.
         *   When this limit is reached, Valkey employs an **eviction policy (`maxmemory-policy`)** to decide which existing keys to remove to free up space. These policies are Valkey's built-in algorithms for automated cache invalidation.
@@ -138,7 +141,8 @@
             *   When an eviction is needed, Valkey **randomly samples a small number of keys** from its dataset (default is `5`).
             *   It then compares access times/frequencies *only among those sampled keys* and evicts the 'best' candidate from that sample.
             *   The `maxmemory-samples` configuration directive controls the **size of this random sample**. A higher value leads to a more accurate approximation but incurs a slightly higher CPU cost during eviction. For most cases, the default is sufficient.
-            *(Trainer: Briefly mention `maxmemory-samples` for LRU/LFU approximation tuning if time permits.)*
+
+            
     *   **Client-Side Caching: Valkey's Tracking Feature**
         *   **Why Needed: Eliminating Network Hops & Saving Time**
             *   Consider the typical request flow: **End User <---(Network A)---> Application Server <---(Network B)---> Valkey Cache <---(Network C)---> Primary DB.**
