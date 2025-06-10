@@ -273,7 +273,7 @@ Valkey provides a diverse set of native data structures, each highly optimized f
 
 **Module Conclusion**
 
-"You've just had comprehensive hands-on experience with Valkey's five core data structures. Notice how each is optimized for specific types of data and operations. This is Valkey's strength: it's not just a flat key-value store, but a powerful **data structure server** that makes complex data interactions simple and lightning-fast.
+You've just had comprehensive hands-on experience with Valkey's five core data structures. Notice how each is optimized for specific types of data and operations. This is Valkey's strength: it's not just a flat key-value store, but a powerful **data structure server** that makes complex data interactions simple and lightning-fast.
 
 The atomic operations (like `INCR` for Strings, `HINCRBY` for Hashes, and `ZINCRBY` for Sorted Sets) are particularly important. They guarantee that your operations are safe even with multiple clients trying to modify the same data concurrently, which is vital in distributed enterprise environments.
 
@@ -287,6 +287,6 @@ While these five are crucial, Valkey also offers a wide array of more specialize
 *   **Probabilistic Data Structures via Modules:** Like **Bloom Filters** (for quickly checking if an item is *likely* present in a large set, avoiding database lookups) or **Count-Min Sketch** (for approximate frequency counts).
 *   **Vector Search:** A cutting-edge capability for AI/ML workloads (semantic search, recommendation engines, image recognition) by storing and querying vector embeddings.
 
-The key takeaway is that Valkey likely has a native solution or a module for almost any common data problem you'll encounter in enterprise applications. Next, we'll dive into how these core data structures are applied in real-world scenarios, starting with the ubiquitous use case of caching."
+The key takeaway is that Valkey likely has a native solution or a module for almost any common data problem you'll encounter in enterprise applications. Next, we'll dive into how these core data structures are applied in real-world scenarios, starting with the ubiquitous use case of caching.
 
 ---
