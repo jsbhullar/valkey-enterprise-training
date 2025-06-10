@@ -1,5 +1,5 @@
 
-### **Module 3: Use Case 1: High-Performance Caching (40 Minutes)**
+### **Module 3: Use Case 1: High-Performance Caching**
 
 **Goal:** Understand how Valkey excels as a cache, implement the most common caching pattern, and grasp critical server-side and client-side cache management strategies for enterprise solutions.
 
