@@ -6,7 +6,7 @@
 **Content:**
 
 1.  **Valkey as a Cache: Fundamentals & Benefits**
-    *   **The Bottleneck:** Explain that primary data stores (databases, external APIs) are often the slowest part of an application due to disk I/O, network latency, and query complexity.
+    *   **The Bottleneck:** The primary data stores (databases, external APIs) are often the slowest part of an application due to disk I/O, network latency, and query complexity.
     *   **The Solution: Valkey as an In-Memory Cache:** Store frequently accessed or computationally expensive data in Valkey, a **lightning-fast, in-memory data store**. Valkey sits between your application and a slower backend data source.
     *   **Key Benefits (Recap):**
         *   **Exceptional Performance:** Microsecond latency, millions of ops/sec from RAM.
