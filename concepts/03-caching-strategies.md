@@ -1,8 +1,3 @@
-Understood! I'll seamlessly integrate the explanation of `maxmemory-samples` into the "Server-Side Memory Management & Eviction Policies" subsection of Module 3. This will provide developers with a clearer understanding of how Valkey's LRU/LFU algorithms work efficiently.
-
-Here's the updated **Module 3: Use Case 1: High-Performance Caching**, with the enhanced explanation:
-
----
 
 ### **Module 3: Use Case 1: High-Performance Caching (40 Minutes)**
 
